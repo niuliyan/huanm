@@ -1,0 +1,36 @@
+git是一个版本控制工具，用于管理代码（历史上包括现在用的svm）
+区别：git：分布式管理
+      svm:集中式管理
+git流程：1.初始化（git init）
+	2.添加文件到本地仓库git add '文件名'
+	3.提交文件到本地仓库git commit -m '说明此次提交'，修改了哪些文件，主要做了哪些操作
+	4.（假如远端仓库已存在）把本地仓库的文件推送到远端 git push
+	（假如远端仓库不存在）在远端建立仓库跟远端仓库进行关联
+	注意：第一次关联远端：git remote add origin '地址'
+	git push -u origin master
+分支：远端+本地
+pull:拉取远端代码并更新 git pull=（git fetch拉取远端代码+git merge合并代码）
+切换分支：git checkout ‘分支名’
+查看分支：git branch -a
+本地创建分支：git branch ‘分支名’（本地分支不可以更新到远端）
+合并分支：
+	1.本地合并：
+遇到冲突：1.拉取远端代码
+	2.在本地进行比较
+	3.解决冲突
+gulp:前端自动化构建工具（压缩、合并、加前缀）基于node开发的插件
+准备两个基本文件：1.package。json  2.gulpfile.js
+
+全局方法：
+1.gulp.task('任务的名字'，【可选】，callback)定义一个任务
+2.gulp.src('文件路径')
+3.gulp.dest('路径')获取
+4.gulp.watch（'文件'，'任务'）监听文件变化，并且执行响应的任务
+在gulp中操作流的方法是pipe（'任务'）
+流程
+1.定义任务
+2.获取文件=>pipe()...=>输出文件
+
+
+
+
